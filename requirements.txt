@@ -3,3 +3,6 @@ easyocr
 opencv-python-headless
 pillow
 numpy
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.0+cpu
+torchvision==0.29.0+cpu
