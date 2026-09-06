@@ -6,17 +6,8 @@ services:
     region: oregon
     plan: free
     branch: main
-    
-    # Build command: install dependencies
     buildCommand: pip install -r requirements.txt
-    
-    # Start command: run Streamlit
     startCommand: streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true
-    
-    # Increase startup timeout (default 30s is too short for EasyOCR)
-    healthCheckPath: /healthz
-    
-    # Environment variables
     envVars:
       - key: STREAMLIT_SERVER_ENABLEXSRFPROTECTION
         value: false
