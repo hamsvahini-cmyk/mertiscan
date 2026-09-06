@@ -1,7 +1,5 @@
-SIH26034/
-├── .streamlit/
-│   └── config.toml
-├── app.py
-├── extractor.py
-├── ocr_engine.py
-└── requirements.txt
+streamlit
+easyocr
+opencv-python-headless
+pillow
+numpy
