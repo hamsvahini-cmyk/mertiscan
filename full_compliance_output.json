@@ -1,0 +1,173 @@
+{
+  "extracted_product_label": {
+    "food_name": "Potato Chips",
+    "common_or_generic_name": "Potato Chips",
+    "brand_name": "Lay's",
+    "net_quantity": {
+      "value": "Not detected",
+      "unit": "Not detected",
+      "raw_text": "Not detected"
+    },
+    "maximum_retail_price": {
+      "value": "Not detected",
+      "currency": "INR",
+      "raw_text": "Not detected"
+    },
+    "ingredients": "Not detected",
+    "nutrition_information": "Detected",
+    "veg_nonveg_declaration": "Not detected",
+    "manufacturer": {
+      "name": "PepsiCo India Holdings Pvt. Ltd.",
+      "address": "Level 3 to 5, Pioneer Square Sector 62, Gurugram - 122101, Haryana, India"
+    },
+    "packer": "Not detected",
+    "importer": "Not detected",
+    "brand_owner": "PepsiCo India Holdings Pvt. Ltd.",
+    "fssai_license_number": "10014064000435",
+    "batch_lot_code": "Not detected",
+    "date_marking": {
+      "manufacturing_date": "Not detected",
+      "packaging_date": "Not detected",
+      "expiry_date": "Not detected",
+      "use_by_date": "Not detected"
+    },
+    "consumer_contact": {
+      "telephone": "1800224020",
+      "email": "feedback@pepsico.com",
+      "address": "Not detected"
+    },
+    "country_of_origin": "India"
+  },
+  "compliance_report": {
+    "overall_status": "NEEDS_REVIEW",
+    "summary": {
+      "total_rules": 20,
+      "compliant": 3,
+      "potential_violations": 0,
+      "needs_review": 17,
+      "not_applicable": 0
+    },
+    "assessments": [
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'common_or_generic_name' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Net quantity value or standard unit missing/unclear."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'quantity_unit' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "MRP declaration not found in clear format."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'consumer_complaint_contact' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'manufacturer_packer_importer' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'declaration_language' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "COMPLIANT",
+        "reason": "Food Name present: Potato Chips"
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'ingredients' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'nutrition_information' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'veg_nonveg_declaration' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'food_additives' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "COMPLIANT",
+        "reason": "Brand Owner details present: PepsiCo India Holdings Pvt. Ltd."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "COMPLIANT",
+        "reason": "Valid 14-digit FSSAI License detected: 10014064000435"
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'batch_lot_code' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'date_marking' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'instructions_for_use' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'allergen_declaration' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'country_of_origin' requires visual label inspection."
+      },
+      {
+        "rule_id": "UNKNOWN",
+        "rule_name": "UNKNOWN",
+        "status": "NEEDS_REVIEW",
+        "reason": "Field 'importer_details' requires visual label inspection."
+      }
+    ]
+  }
+}

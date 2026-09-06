@@ -1,0 +1,41 @@
+{
+  "product_label": {
+    "food_name": "Potato Chips",
+    "common_or_generic_name": "Potato Chips",
+    "brand_name": "Lay's",
+    "net_quantity": {
+      "value": "Not detected",
+      "unit": "Not detected",
+      "raw_text": "Not detected"
+    },
+    "maximum_retail_price": {
+      "value": "Not detected",
+      "currency": "INR",
+      "raw_text": "Not detected"
+    },
+    "ingredients": "Not detected",
+    "nutrition_information": "Detected",
+    "veg_nonveg_declaration": "Not detected",
+    "manufacturer": {
+      "name": "PepsiCo India Holdings Pvt. Ltd.",
+      "address": "Level 3 to 5, Pioneer Square Sector 62, Gurugram - 122101, Haryana, India"
+    },
+    "packer": "Not detected",
+    "importer": "Not detected",
+    "brand_owner": "PepsiCo India Holdings Pvt. Ltd.",
+    "fssai_license_number": "10014064000435",
+    "batch_lot_code": "Not detected",
+    "date_marking": {
+      "manufacturing_date": "Not detected",
+      "packaging_date": "Not detected",
+      "expiry_date": "Not detected",
+      "use_by_date": "Not detected"
+    },
+    "consumer_contact": {
+      "telephone": "1800224020",
+      "email": "feedback@pepsico.com",
+      "address": "Not detected"
+    },
+    "country_of_origin": "India"
+  }
+}

@@ -1,0 +1,190 @@
+{
+    "fields": [
+        {
+            "field": "food_name",
+            "patterns": [
+                "product name",
+                "food name"
+            ],
+            "extraction_type": "text",
+            "confidence_required": 0.70
+        },
+        {
+            "field": "common_or_generic_name",
+            "patterns": [
+                "biscuits",
+                "chips",
+                "snack",
+                "noodles",
+                "juice",
+                "drink",
+                "flour",
+                "rice"
+            ],
+            "extraction_type": "text",
+            "confidence_required": 0.70
+        },
+        {
+            "field": "net_quantity",
+            "patterns": [
+                "net wt",
+                "net weight",
+                "net quantity",
+                "net qty"
+            ],
+            "extraction_type": "quantity",
+            "confidence_required": 0.80
+        },
+        {
+            "field": "maximum_retail_price",
+            "patterns": [
+                "mrp",
+                "maximum retail price",
+                "retail sale price"
+            ],
+            "extraction_type": "price",
+            "confidence_required": 0.85
+        },
+        {
+            "field": "ingredients",
+            "patterns": [
+                "ingredients",
+                "ingredient"
+            ],
+            "extraction_type": "section",
+            "confidence_required": 0.75
+        },
+        {
+            "field": "nutrition_information",
+            "patterns": [
+                "nutrition information",
+                "nutritional information",
+                "energy",
+                "protein",
+                "carbohydrate",
+                "fat"
+            ],
+            "extraction_type": "section",
+            "confidence_required": 0.70
+        },
+        {
+            "field": "fssai_license_number",
+            "patterns": [
+                "fssai",
+                "lic no",
+                "license no",
+                "licence no"
+            ],
+            "extraction_type": "license_number",
+            "confidence_required": 0.85
+        },
+        {
+            "field": "batch_lot_code",
+            "patterns": [
+                "batch no",
+                "batch",
+                "lot no",
+                "lot",
+                "code no"
+            ],
+            "extraction_type": "text",
+            "confidence_required": 0.75
+        },
+        {
+            "field": "date_marking",
+            "patterns": [
+                "mfg",
+                "manufactured",
+                "packed on",
+                "mfd",
+                "expiry",
+                "use by",
+                "best before"
+            ],
+            "extraction_type": "date",
+            "confidence_required": 0.75
+        },
+        {
+            "field": "manufacturer",
+            "patterns": [
+                "manufactured by",
+                "manufactured & marketed by",
+                "manufactured and marketed by"
+            ],
+            "extraction_type": "organization_and_address",
+            "confidence_required": 0.70
+        },
+        {
+            "field": "packer",
+            "patterns": [
+                "packed by",
+                "packed & marketed by",
+                "packed and marketed by"
+            ],
+            "extraction_type": "organization_and_address",
+            "confidence_required": 0.70
+        },
+        {
+            "field": "importer",
+            "patterns": [
+                "imported by",
+                "importer"
+            ],
+            "extraction_type": "organization_and_address",
+            "confidence_required": 0.70
+        },
+        {
+            "field": "brand_owner",
+            "patterns": [
+                "marketed by",
+                "brand owner"
+            ],
+            "extraction_type": "organization_and_address",
+            "confidence_required": 0.70
+        },
+        {
+            "field": "consumer_contact",
+            "patterns": [
+                "customer care",
+                "consumer care",
+                "consumer complaints",
+                "complaints",
+                "helpline",
+                "toll free"
+            ],
+            "extraction_type": "contact",
+            "confidence_required": 0.70
+        },
+        {
+            "field": "country_of_origin",
+            "patterns": [
+                "country of origin",
+                "made in",
+                "product of"
+            ],
+            "extraction_type": "country",
+            "confidence_required": 0.80
+        },
+        {
+            "field": "allergen_declaration",
+            "patterns": [
+                "contains",
+                "allergen",
+                "may contain"
+            ],
+            "extraction_type": "section",
+            "confidence_required": 0.70
+        },
+        {
+            "field": "instructions_for_use",
+            "patterns": [
+                "directions",
+                "instructions",
+                "preparation",
+                "how to use"
+            ],
+            "extraction_type": "section",
+            "confidence_required": 0.70
+        }
+    ]
+}

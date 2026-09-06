@@ -1,0 +1,283 @@
+{
+    "project": {
+        "name": "Packaged Food Label Compliance Checker",
+        "country": "India",
+        "scope": "Pre-packaged food labels",
+        "legal_framework": [
+            "Legal Metrology (Packaged Commodities) Rules, 2011",
+            "Food Safety and Standards (Labelling and Display) Regulations, 2020"
+        ],
+        "rule_dataset_version": "prototype-1",
+        "last_verified": "2026-09-04"
+    },
+
+    "result_statuses": [
+        "COMPLIANT",
+        "POTENTIAL_VIOLATION",
+        "NOT_APPLICABLE",
+        "NEEDS_REVIEW"
+    ],
+
+    "automation_levels": [
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "MANUAL"
+    ],
+
+    "rules": [
+
+        {
+            "id": "LM_COMMON_NAME",
+            "source": "Legal Metrology",
+            "field": "common_or_generic_name",
+            "requirement": "The common or generic name of the commodity should be declared.",
+            "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011, Rule 6(1)(b)",
+            "check_type": "presence",
+            "automation_level": "HIGH",
+            "applies_when": "Applicable packaged commodity and no relevant exemption applies.",
+            "failure_status": "POTENTIAL_VIOLATION",
+            "notes": "Food-specific labelling requirements must also be considered."
+        },
+
+        {
+            "id": "LM_NET_QUANTITY",
+            "source": "Legal Metrology",
+            "field": "net_quantity",
+            "requirement": "The net quantity of the commodity should be declared in the applicable standard unit.",
+            "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011, Rule 6(1)(c) and Rule 12",
+            "check_type": "presence_and_format",
+            "automation_level": "HIGH",
+            "applies_when": "Applicable packaged commodity and no relevant exemption applies.",
+            "failure_status": "POTENTIAL_VIOLATION"
+        },
+
+        {
+            "id": "LM_QUANTITY_UNIT",
+            "source": "Legal Metrology",
+            "field": "quantity_unit",
+            "requirement": "The declared quantity should use the applicable unit of mass, measure or number.",
+            "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011, Rule 12",
+            "check_type": "format",
+            "automation_level": "HIGH",
+            "applies_when": "A net quantity declaration is required.",
+            "failure_status": "POTENTIAL_VIOLATION"
+        },
+
+        {
+            "id": "LM_MRP",
+            "source": "Legal Metrology",
+            "field": "maximum_retail_price",
+            "requirement": "The retail sale price of the package should be declared as required by the applicable rules.",
+            "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011, Rule 6(1)(e)",
+            "check_type": "presence_and_format",
+            "automation_level": "HIGH",
+            "applies_when": "Applicable retail package and no relevant exemption applies.",
+            "failure_status": "POTENTIAL_VIOLATION"
+        },
+
+        {
+            "id": "LM_CONSUMER_CONTACT",
+            "source": "Legal Metrology",
+            "field": "consumer_complaint_contact",
+            "requirement": "Consumer complaint contact details should be provided as required by the applicable rules.",
+            "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011, Rule 6(2)",
+            "check_type": "presence",
+            "automation_level": "MEDIUM",
+            "applies_when": "Applicable packaged commodity and no relevant exemption applies.",
+            "failure_status": "POTENTIAL_VIOLATION",
+            "notes": "OCR may identify phone/email/address text but cannot reliably establish legal completeness."
+        },
+
+        {
+            "id": "LM_MANUFACTURER_PACKER",
+            "source": "Legal Metrology",
+            "field": "manufacturer_packer_importer",
+            "requirement": "Applicable manufacturer, packer or importer identification and address declarations should be present.",
+            "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011, Rule 10 read with applicable provisions of Rule 6",
+            "check_type": "presence_and_context",
+            "automation_level": "MEDIUM",
+            "applies_when": "Applicable manufacturer, packer or importer declaration is required.",
+            "failure_status": "POTENTIAL_VIOLATION",
+            "notes": "Applicability depends on the package and role of the entity."
+        },
+
+        {
+            "id": "LM_DECLARATION_LANGUAGE",
+            "source": "Legal Metrology",
+            "field": "declaration_language",
+            "requirement": "Required declarations should be in Hindi in Devanagari script or English; additional languages may also be used.",
+            "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011, Rule 9(4)",
+            "check_type": "language",
+            "automation_level": "MEDIUM",
+            "applies_when": "Required package declarations are being assessed.",
+            "failure_status": "POTENTIAL_VIOLATION",
+            "notes": "OCR language detection can provide an indication but should not be treated as definitive legal verification."
+        },
+
+        {
+            "id": "FSSAI_FOOD_NAME",
+            "source": "FSSAI",
+            "field": "food_name",
+            "requirement": "The name of the food should be declared on the label.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5",
+            "check_type": "presence",
+            "automation_level": "HIGH",
+            "applies_when": "Pre-packaged food.",
+            "failure_status": "POTENTIAL_VIOLATION"
+        },
+
+        {
+            "id": "FSSAI_INGREDIENTS",
+            "source": "FSSAI",
+            "field": "ingredients",
+            "requirement": "The list of ingredients should be declared where required.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(2)",
+            "check_type": "presence_and_structure",
+            "automation_level": "MEDIUM",
+            "applies_when": "Pre-packaged food, subject to applicable exemptions.",
+            "failure_status": "POTENTIAL_VIOLATION",
+            "notes": "Certain foods and package sizes have exemptions."
+        },
+
+        {
+            "id": "FSSAI_NUTRITION",
+            "source": "FSSAI",
+            "field": "nutrition_information",
+            "requirement": "Required nutritional information should be declared in the prescribed manner.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(3)",
+            "check_type": "presence_and_structure",
+            "automation_level": "MEDIUM",
+            "applies_when": "Pre-packaged food unless an applicable exemption applies.",
+            "failure_status": "POTENTIAL_VIOLATION",
+            "notes": "OCR can detect the nutrition panel but cannot reliably validate every numerical value."
+        },
+
+        {
+            "id": "FSSAI_VEG_NONVEG",
+            "source": "FSSAI",
+            "field": "veg_nonveg_declaration",
+            "requirement": "The applicable vegetarian or non-vegetarian declaration should be displayed.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(4)",
+            "check_type": "presence",
+            "automation_level": "MEDIUM",
+            "applies_when": "Applicable pre-packaged food.",
+            "failure_status": "POTENTIAL_VIOLATION",
+            "notes": "Symbol detection is preferable to OCR alone."
+        },
+
+        {
+            "id": "FSSAI_FOOD_ADDITIVES",
+            "source": "FSSAI",
+            "field": "food_additives",
+            "requirement": "Applicable food additive information should be declared in accordance with the regulations.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(5)",
+            "check_type": "context",
+            "automation_level": "LOW",
+            "applies_when": "Where food additives are present or applicable.",
+            "failure_status": "NEEDS_REVIEW",
+            "notes": "Determining whether every additive declaration is legally correct requires product and additive context."
+        },
+
+        {
+            "id": "FSSAI_BRAND_OWNER",
+            "source": "FSSAI",
+            "field": "brand_owner",
+            "requirement": "The name and complete address of the brand owner should be declared as required.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(6)",
+            "check_type": "presence_and_structure",
+            "automation_level": "MEDIUM",
+            "applies_when": "Pre-packaged food.",
+            "failure_status": "POTENTIAL_VIOLATION",
+            "notes": "OCR can detect the declaration but cannot reliably verify address completeness."
+        },
+
+        {
+            "id": "FSSAI_LICENSE",
+            "source": "FSSAI",
+            "field": "fssai_license_number",
+            "requirement": "The applicable FSSAI logo and licence number should be displayed on the food label.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(7)",
+            "check_type": "presence_and_format",
+            "automation_level": "HIGH",
+            "applies_when": "Pre-packaged food subject to the applicable FSSAI licensing provisions.",
+            "failure_status": "POTENTIAL_VIOLATION",
+            "notes": "Logo presence is better assessed using image processing; licence number can be detected using OCR."
+        },
+
+        {
+            "id": "FSSAI_BATCH",
+            "source": "FSSAI",
+            "field": "batch_lot_code",
+            "requirement": "A batch number, code number or lot number should be declared on the label.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(9)",
+            "check_type": "presence",
+            "automation_level": "MEDIUM",
+            "applies_when": "Pre-packaged food subject to the applicable provisions and exemptions.",
+            "failure_status": "POTENTIAL_VIOLATION"
+        },
+
+        {
+            "id": "FSSAI_DATE_MARKING",
+            "source": "FSSAI",
+            "field": "date_marking",
+            "requirement": "Date of manufacture or packaging and expiry/use-by information should be declared as applicable.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(10)",
+            "check_type": "presence_and_format",
+            "automation_level": "MEDIUM",
+            "applies_when": "Pre-packaged food subject to the applicable date-marking requirements.",
+            "failure_status": "POTENTIAL_VIOLATION",
+            "notes": "Shelf-life and product-specific context affect the exact requirement."
+        },
+
+        {
+            "id": "FSSAI_INSTRUCTIONS",
+            "source": "FSSAI",
+            "field": "instructions_for_use",
+            "requirement": "Instructions for use, including reconstitution or safety-related directions, should be provided where applicable.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(13)",
+            "check_type": "context",
+            "automation_level": "LOW",
+            "applies_when": "Where instructions are necessary or applicable to proper use or safety.",
+            "failure_status": "NEEDS_REVIEW"
+        },
+
+        {
+            "id": "FSSAI_ALLERGEN",
+            "source": "FSSAI",
+            "field": "allergen_declaration",
+            "requirement": "Applicable food allergens should be declared separately in the prescribed manner.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(14)",
+            "check_type": "context_and_presence",
+            "automation_level": "LOW",
+            "applies_when": "Where an applicable allergen is present.",
+            "failure_status": "NEEDS_REVIEW",
+            "notes": "OCR alone cannot reliably determine whether every allergen requiring declaration is actually present in the product."
+        },
+
+        {
+            "id": "FSSAI_COUNTRY_ORIGIN",
+            "source": "FSSAI",
+            "field": "country_of_origin",
+            "requirement": "Country-of-origin information should be declared where required for imported food.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(12)",
+            "check_type": "context_and_presence",
+            "automation_level": "MEDIUM",
+            "applies_when": "Imported food.",
+            "failure_status": "POTENTIAL_VIOLATION"
+        },
+
+        {
+            "id": "FSSAI_IMPORTER",
+            "source": "FSSAI",
+            "field": "importer_details",
+            "requirement": "The name and complete address of the importer in India should be declared for imported food.",
+            "legal_reference": "Food Safety and Standards (Labelling and Display) Regulations, 2020, Regulation 5(6)(b)",
+            "check_type": "context_and_presence",
+            "automation_level": "MEDIUM",
+            "applies_when": "Imported food.",
+            "failure_status": "POTENTIAL_VIOLATION",
+            "notes": "Import status must be established before applying this rule."
+        }
+    ]
+}
